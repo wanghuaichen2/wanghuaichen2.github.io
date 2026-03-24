@@ -36,7 +36,7 @@ redirect_from:
 
 Chunhong Liu; **Huaichen Wang**; Rui Zhou; Jialei Liu; Peiyan Yuan; Bo Cheng
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='Reza_eQAAAAJ:zYLM7Y9cAGgC'></span></strong>
+[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=Reza_eQAAAAJ&citation_for_view=Reza_eQAAAAJ:zYLM7Y9cAGgC) <strong><span class='show_paper_citations' data='Reza_eQAAAAJ:zYLM7Y9cAGgC'></span></strong>
 
 - This work proposes a joint service deployment and request routing method for vehicle collaboration that leverages a dual-timescale strategy and swarm intelligence to reduce request response time by accounting for communication costs and dynamic vehicle cluster networks.
 </div>
