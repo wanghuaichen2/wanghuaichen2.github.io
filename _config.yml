@@ -8,7 +8,7 @@
 # Site Settings
 title                    : "Huaichen Wang"
 description              : "My research focuses on efficient deployment and inference optimization of deep learning models under resource-constrained environments."
-repository               : ""
+repository               : "wanghuaichen2/wanghuaichen2.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics

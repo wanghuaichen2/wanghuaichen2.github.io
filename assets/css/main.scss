@@ -40,6 +40,10 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+h1 + .paper-box {
+    padding-top: 0.5em;
+}
+
 .paper-box {
     display: flex;
     justify-content: left;
