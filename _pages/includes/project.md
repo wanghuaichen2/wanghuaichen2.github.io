@@ -5,6 +5,9 @@
 .carousel-dots { text-align: center; padding: 6px 0 0; }
 .carousel-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #ccc; margin: 0 3px; cursor: pointer; transition: background 0.2s; }
 .carousel-dot.active { background: #555; }
+#carousel-2 .carousel-slide { aspect-ratio: 1920 / 1040; background: #f8f8f8; }
+#carousel-2 .carousel-slide a { display: block; width: 100%; height: 100%; }
+#carousel-2 .carousel-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 </style>
 
 # 📁 个人项目 {#personal-project}
@@ -12,18 +15,18 @@
 <div class='paper-box'><div class='paper-box-image'><div>
 <div class="carousel" id="carousel-1">
   <div class="carousel-track">
-    <div class="carousel-slide"><img src='images/project/cloud_edge_device_sim.png' alt="云边端协同仿真平台" width="100%"></div>
-    <div class="carousel-slide"><img src='images/project/service-orchestration.png' alt="服务编排" width="100%"></div>
-    <div class="carousel-slide"><img src='images/project/request-template.png' alt="创建请求" width="100%"></div>
-    <div class="carousel-slide"><img src='images/project/simulation-controls.png' alt="仿真控制" width="100%"></div>
-    <div class="carousel-slide"><img src='images/project/results-analysis.png' alt="结果分析" width="100%"></div>
+    <div class="carousel-slide"><img src='images/project/cloud_edge_device_sim/cloud_edge_device_sim.png' alt="云边端协同仿真平台" width="100%"></div>
+    <div class="carousel-slide"><img src='images/project/cloud_edge_device_sim/service-orchestration.png' alt="服务编排" width="100%"></div>
+    <div class="carousel-slide"><img src='images/project/cloud_edge_device_sim/request-template.png' alt="创建请求" width="100%"></div>
+    <div class="carousel-slide"><img src='images/project/cloud_edge_device_sim/simulation-controls.png' alt="仿真控制" width="100%"></div>
+    <div class="carousel-slide"><img src='images/project/cloud_edge_device_sim/results-analysis.png' alt="结果分析" width="100%"></div>
   </div>
   <div class="carousel-dots">
     <span class="carousel-dot active" onclick="goToSlide('carousel-1',0)"></span>
-    <span class="carousel-dot active" onclick="goToSlide('carousel-1',1)"></span>
-    <span class="carousel-dot active" onclick="goToSlide('carousel-1',2)"></span>
-    <span class="carousel-dot active" onclick="goToSlide('carousel-1',3)"></span>
-    <span class="carousel-dot active" onclick="goToSlide('carousel-1',4)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-1',1)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-1',2)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-1',3)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-1',4)"></span>
   </div>
 </div>
 </div></div>
@@ -37,6 +40,37 @@
 - 自定义调度算法: 内置贪心、轮询、流水线拆分三种调度器，支持自定义算法
 - 模型拆分*: 当单设备放不下大模型时，搜索多设备拆分方案，功能探索阶段
 - 实时可视化分析: 1秒粒度时间序列性能折线图 + 设备利用率柱状图
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div>
+<div class="carousel" id="carousel-2">
+  <div class="carousel-track">
+    <div class="carousel-slide"><a href='images/project/crown_2d_3d/laplacian_side_by_side.png' target="_blank"><img src='images/project/crown_2d_3d/laplacian_side_by_side.png' alt="Laplacian对比" width="100%"></a></div>
+    <div class="carousel-slide"><a href='images/project/crown_2d_3d/pred_crown.png' target="_blank"><img src='images/project/crown_2d_3d/pred_crown.png' alt="预测牙冠" width="100%"></a></div>
+    <div class="carousel-slide"><a href='images/project/crown_2d_3d/pred_crown_view.gif' target="_blank"><img src='images/project/crown_2d_3d/pred_crown_view.gif' alt="旋转展示" width="100%"></a></div>
+    <div class="carousel-slide"><a href='images/project/crown_2d_3d/main_workflow.svg' target="_blank"><img src='images/project/crown_2d_3d/main_workflow.svg' alt="端到端主流程" width="100%"></a></div>
+    <div class="carousel-slide"><a href='images/project/crown_2d_3d/run_log.png' target="_blank"><img src='images/project/crown_2d_3d/run_log.png' alt="训练日志" width="100%"></a></div>
+  </div>
+  <div class="carousel-dots">
+    <span class="carousel-dot active" onclick="goToSlide('carousel-2',0)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-2',1)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-2',2)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-2',3)"></span>
+    <span class="carousel-dot" onclick="goToSlide('carousel-2',4)"></span>
+  </div>
+</div>
+</div></div>
+<div class='paper-box-text' markdown="1">
+**[3D牙冠自动生成 Crown 3D ↔ 2D v6.0](https://github.com/wanghuaichen2/Crown_3D_2D-pub)** \\
+*2026.05.22*
+
+将 3D 牙冠设计转化为 2D 球面图像回归问题：以 Attention U-Net + PatchGAN 预测全局径向距离图，再还原为 3D 网格。
+- 球面投影: 以牙冠质心为球心，牙冠/基牙/对颌 → 2D 径向距离图，将 3D 设计转化为 2D 回归
+- Attention U-Net + PatchGAN: 注意力机制聚焦牙冠关键区域，对抗训练增强边缘与曲面细节
+- 颌面监督: 局部正交投影辅助监督，显著提升咬合面窝沟形态精度
+- 推理模式: 支持 PLY 直推 / 球面三角化 / 泊松重建三种 3D 还原方式
+- 临床验证: 5000 例 46 牙数据训练，近远中/颊舌侧合格率 95%↑，颌面合格率 80%↑（100 例医师评测）
 </div>
 </div>
 
