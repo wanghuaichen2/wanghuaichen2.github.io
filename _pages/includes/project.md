@@ -32,7 +32,7 @@
 </div></div>
 <div class='paper-box-text' markdown="1">
 **[云边端协同任务卸载仿真平台 v2.2](https://github.com/wanghuaichen2/cloud_edge_device_sim)** \\
-*2026.04.20*
+*2025.04.20*
 
 面向云-边-端三层异构网络的任务卸载调度仿真平台。支持自定义网络拓扑与任务 DAG 建模，为边缘计算资源管理研究提供可复现的实验环境。
 - 拓扑编辑器: 支持云/边缘/终端三层异构设备自由编排
